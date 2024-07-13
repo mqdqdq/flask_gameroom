@@ -1,0 +1,32 @@
+<div id="score-container">
+    <p id="score-label">Score</p>
+    <p id="score-1-text">0</p>
+    <p id="score-2-text">0</p>
+</div>
+
+<div class="grid" id="game-board">
+    {% set id = namespace(value=0) %}
+    {% for col in range(3) %}
+        <div class="row">
+        {% for row in range(8) %}
+            <div class="card" id="card-{{id.value}}"">
+                <svg width="60" height="105" viewBox="0 0 45 80">
+                    <rect class="card-back" width="45" height="80" x="0" y="0" rx="12" ry="12" stroke="white" stroke-width="4" visibility="visible"/>
+                    <style> .card-symbol {font: bold 35px sans-serif; } </style>
+                    <rect class="card-front" width="45" height="80" x="0" y="0" rx="12" ry="12" stroke="white" stroke-width="4" visibility="hidden"/>
+                    <text class="card-symbol" x="{{ 45 / 2 }}" y="{{ 80 / 2 }}" text-anchor="middle" dominant-baseline="central" visibility="hidden"></text>
+                    {% set id.value = id.value + 1 %}
+                </svg>
+            </div>
+        {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+<div class="state-container">
+    <p id="state-text"></p>
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/memory.css') }}">
+<script src="{{ url_for('static', filename='scripts/memory/constants.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/memory/view.js') }}"></script>

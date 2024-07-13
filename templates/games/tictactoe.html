@@ -1,0 +1,17 @@
+<div class="grid" id="gameboard">
+{% for col in range(3) %}
+    <div class="row">
+    {% for row in range(3) %}
+        <div class="cell" id="row-{{row + 1}}-col-{{col + 1}}"></div>
+    {% endfor %}
+    </div>
+{% endfor %}
+</div>
+
+<div class="state-container">
+    <p id="state-text"></p>
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/tictactoe.css') }}">
+<script src="{{ url_for('static', filename='scripts/tictactoe/constants.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/tictactoe/view.js') }}"></script>

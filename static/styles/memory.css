@@ -1,0 +1,72 @@
+body {
+    background: black;
+}
+
+.grid {
+    display: table;
+    border-spacing: 6px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row {
+    display: table-row
+}
+
+.card {
+    display: table-cell;
+    padding-top: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.state-container {
+	border: white 4px solid;
+	width: fit-content;
+	text-align: center;
+	margin: auto;
+	margin-top: 2em;
+}
+
+#state-text {
+	color: white;
+	font-family:'Courier New', Courier, monospace;
+	font-size: 2em;
+	margin: 0;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+#score-1-text {
+	float: right;
+	color: white;
+	display: inline-block;
+	font-style: bold;
+	font-family:'Courier New', Courier, monospace;
+}
+  
+#score-2-text {
+	float: left;
+	color: white;
+	display: inline-block;
+	font-style: bold;
+	font-family:'Courier New', Courier, monospace;
+}
+
+#score-label {
+	float: center;
+	color: white;
+	display: inline-block;
+	font-style: bold;
+	font-family:'Courier New', Courier, monospace;
+}
+
+#score-container {
+	width: 400px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px white solid;
+	padding-left: 20px;
+	padding-right: 20px;
+}

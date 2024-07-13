@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="header-container">
+	<h1>Gameroom</h1>
+</div>
+<div class="form-container">
+	<form method="post">
+    	<div class="form-field">
+        <label for="gametype"><b>Game:</b></label>
+        <select name="gametype">
+        	{% for key, value in games.items() %}
+          	<option value={{key}}>{{value}}</option>
+          	{% endfor %}
+        </select>
+		</div>
+    	<div class="form-field">
+        	<label for="password"><b>Password:</b></label>
+        	<input name="password" type="password">
+		</div>
+		<div class="form-field">
+			<input class="form-button" type="submit" value="Create Room">
+		</div>
+	</form>
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/room.css') }}">
+
+{% endblock %}

@@ -1,0 +1,39 @@
+<div id="game-container">
+    <div class="grid" id="gameboard">
+        {% for col in range(8) %}
+            <div class="row">
+            {% for row in range(8) %}
+                <div class="cell row-{{row}} col-{{col}}">
+                    <svg class="circle-svg" width="50" height="50" viewBox="0 0 100 100">
+                        <circle class="circle-draw" r="35" cx="50" cy="50" fill="green" stroke="green" stroke-width="4"></circle>
+                    </svg>
+                </div>
+            {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="score-container">
+    <svg width="80" height="80" viewBox="0 0 100 100">
+        <g>
+            <circle r="40" cx="50" cy="50" fill="white" stroke="white" stroke-width="4"></circle>
+            <text class="score-font" id="score-text-light" x="50" y="50" fill="black" class="score-font" text-anchor="middle" dominant-baseline="central">0</text>
+        </g>
+    </svg>
+    <svg width="80" height="80" viewBox="0 0 100 100">
+        <g>
+            <circle r="40" cx="50" cy="50" fill="black" stroke="white" stroke-width="4"></circle>
+            <text class="score-font" id="score-text-dark" x="50" y="50" fill="white" class="score-font" text-anchor="middle" dominant-baseline="central">0</text>
+        </g>
+    </svg>
+    <style> .score-font {font: bold 40px sans-serif; } </style>
+</div>
+
+<div class="state-container">
+    <p id="state-text"></p>
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/othello.css') }}">
+<script src="{{ url_for('static', filename='scripts/othello/constants.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/othello/view.js') }}"></script>

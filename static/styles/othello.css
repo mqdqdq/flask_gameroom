@@ -1,0 +1,31 @@
+.grid {
+    display: table;
+    border-spacing: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.row {
+    display: table-row
+}
+  
+.cell {
+    border: green 4px solid;
+    background-color: green;
+    border-radius: 4px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.circle-svg {
+    display: block;
+}
+
+.score-container {
+    margin-top: 12px;
+    width: 1000px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

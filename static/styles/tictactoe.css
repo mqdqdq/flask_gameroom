@@ -1,0 +1,39 @@
+.grid {
+    display: table;
+    border-spacing: 6px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row {
+    display: table-row
+}
+
+.cell {
+	width: 120px;
+	height: 120px;
+	border: white 4px solid;
+	border-radius: 8px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 6em;
+	font-family: 'Geneva, Tahoma, sans-serif';
+}
+
+.state-container {
+	border: white 4px solid;
+	width: fit-content;
+	text-align: center;
+	margin: auto;
+	margin-top: 2em;
+}
+
+#state-text {
+	color: white;
+	font-family:'Courier New', Courier, monospace;
+	font-size: 2em;
+	margin: 0;
+	margin-left: 1em;
+	margin-right: 1em;
+}
