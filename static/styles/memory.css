@@ -1,7 +1,3 @@
-body {
-    background: black;
-}
-
 .grid {
     display: table;
     border-spacing: 6px;
@@ -20,53 +16,33 @@ body {
     padding-right: 8px;
 }
 
-.state-container {
-	border: white 4px solid;
-	width: fit-content;
-	text-align: center;
-	margin: auto;
-	margin-top: 2em;
+#state-text {
+	font-size: 1.6em;
+	display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#score-label {
+	display: inline-block;
+	font-style: bold;
+}
+
+.score-container {
+    margin-top: 12px;
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+	font-size: 1.0em;
+	width: 100%;
+}
+
+label {
+	font-weight: bold;
 }
 
 #state-text {
-	color: white;
-	font-family:'Courier New', Courier, monospace;
-	font-size: 2em;
-	margin: 0;
-	margin-left: 1em;
-	margin-right: 1em;
-}
-
-#score-1-text {
-	float: right;
-	color: white;
+	font-size: 1.6em;
 	display: inline-block;
-	font-style: bold;
-	font-family:'Courier New', Courier, monospace;
-}
-  
-#score-2-text {
-	float: left;
-	color: white;
-	display: inline-block;
-	font-style: bold;
-	font-family:'Courier New', Courier, monospace;
-}
-
-#score-label {
-	float: center;
-	color: white;
-	display: inline-block;
-	font-style: bold;
-	font-family:'Courier New', Courier, monospace;
-}
-
-#score-container {
-	width: 400px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	border: 2px white solid;
-	padding-left: 20px;
-	padding-right: 20px;
+    margin-top: 0.8em;
+    margin-bottom: auto;
 }

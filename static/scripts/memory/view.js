@@ -9,8 +9,8 @@ let initLoad = false;
 
 let stateText = document.querySelector("#state-text");
 
-let score1Text = document.querySelector("#score-1-text");
-let score2Text = document.querySelector("#score-2-text");
+let scorePlayerText = document.querySelector("#score-player-text");
+let scoreOpponentText = document.querySelector("#score-opponent-text");
 
 function onLoad(data) {
     deck = data.deck;
@@ -21,6 +21,7 @@ function onLoad(data) {
     round = data.round;
     if (isNewGame()) {
         startGame();
+        setCardFront();
     }
     if (!initLoad) {
         initLoad = true;
@@ -144,8 +145,8 @@ function setState() {
 }
 
 function setScore() {
-    score1Text.innerHTML = score1;
-    score2Text.innerHTML = score2;
+    scorePlayerText.innerHTML = (PLAYER == 1) ? score1 : score2;
+    scoreOpponentText.innerHTML = (PLAYER == 1) ? score2 : score1;
 }
 
 function onLeave() {

@@ -3,6 +3,10 @@
     border-spacing: 4px;
     margin-left: auto;
     margin-right: auto;
+    background-color: black;
+    padding: 1em;
+    border: 5px solid black;
+    border-radius: 10px;
 }
   
 .row {
@@ -24,8 +28,22 @@
 
 .score-container {
     margin-top: 12px;
-    width: 1000px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#score-dark {
+    vertical-align: middle;
+}
+
+#score-light {
+    vertical-align: middle;
+}
+
+#state-text {
+	font-size: 1.6em;
+	display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
 }

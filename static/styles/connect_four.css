@@ -1,8 +1,4 @@
-#game-container {
-    text-align: center;
-}
-
-#gameboard {
+#game-board {
     border: solid white 4px;
     background: black;
 	width: min-content;
@@ -12,23 +8,14 @@
 	margin: auto;
 }
 
-body {
-    background: black;
-}
-
 .state-container {
-	border: white 4px solid;
 	width: fit-content;
 	text-align: center;
 	margin: auto;
-	margin-top: 2em;
+	margin-top: 2.0em;
 }
 
 #state-text {
-	color: white;
-	font-family:'Courier New', Courier, monospace;
-	font-size: 2em;
-	margin: 0;
-	margin-left: 1em;
-	margin-right: 1em;
+	font-size: 1.4em;
+	display: inline-block;
 }

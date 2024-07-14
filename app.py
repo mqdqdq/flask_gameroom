@@ -11,3 +11,5 @@ app.config['SESSION_TYPE'] = 'filesystem'
 app.register_blueprint(views_bp)
 Session(app)
 socketio.init_app(app)
+
+#app.run(debug=True)

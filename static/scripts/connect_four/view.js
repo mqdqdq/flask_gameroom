@@ -137,7 +137,7 @@ function setState() {
                 stateText.innerHTML = (isPlayerTurn()) ? STATUS_PLAYER : STATUS_OPPONENT;
                 break;
             case STATE_FINISHED:
-                stateText.innerHTML = (isPlayerTurn()) ? STATUS_PLAYER_WIN : STATUS_OPPONENT_WIN;
+                stateText.innerHTML = (isPlayerTurn()) ? STATUS_LOSE : STATUS_WIN;
                 break;
         }
     }

@@ -1,21 +1,3 @@
-{% extends 'base.html' %}
-{% block content %}
-<div class="room-container">
-    <label>Room:</label>
-    <p id="roomid-text"> {{ session['room_id'] }}</p>
-    <label>Status:</label>
-    <p id="status-text"></p>
-    <a href="{{ url_for('views.create_room') }}"><button id="exit-button">Exit</button></a>
-</div>
-
-<div class="info-container">
-    <p id="info-text">-</p>
-</div>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='styles/game.css') }}">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
-<script>
-
     /* This script encapsulates alot of the underlying methods used in the game rooms.
     In particular rematching, handling of sockets, transmitting and recieving data between users.
     It is limited to only two-player games. */
@@ -42,7 +24,6 @@
 
     let statusText = document.querySelector("#status-text");
     let infoText = document.querySelector("#info-text");
-    let infoContainer = document.querySelector(".info-container");
 
     let roomState = STATE_ROOM_WAITING;
     setRoomStatus();
@@ -64,12 +45,12 @@
 
     function endGame() {
         infoText.innerHTML = INFO_TEXT_REMATCH;
-        infoContainer.style.visibility = 'visible';
+        infoText.style.visibility = 'visible';
         rematch = false;
     }
 
     function startGame() {
-        infoContainer.style.visibility = 'hidden';
+        infoText.style.visibility = 'hidden';
     }
 
     socket.on('load_data_client', function(data) {
@@ -144,12 +125,3 @@
                 break;
         }
     });
-
-</script>
-
-<div id="game-container">
-    {% set game = game_type %}
-    {% include "games/" + game_type + ".html" %}
-</div>
-
-{% endblock %}

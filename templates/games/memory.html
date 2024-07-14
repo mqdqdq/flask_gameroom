@@ -1,9 +1,3 @@
-<div id="score-container">
-    <p id="score-label">Score</p>
-    <p id="score-1-text">0</p>
-    <p id="score-2-text">0</p>
-</div>
-
 <div class="grid" id="game-board">
     {% set id = namespace(value=0) %}
     {% for col in range(3) %}
@@ -11,9 +5,23 @@
         {% for row in range(8) %}
             <div class="card" id="card-{{id.value}}"">
                 <svg width="60" height="105" viewBox="0 0 45 80">
-                    <rect class="card-back" width="45" height="80" x="0" y="0" rx="12" ry="12" stroke="white" stroke-width="4" visibility="visible"/>
+
+                    <pattern id="pattern-cubes" x="0" y="0" patternUnits="userSpaceOnUse" width="22.5" height="40" viewBox="0 0 10 16"> 
+     
+                        <g id="cube">
+                          <!-- We'll apply the `fill` in the CSS for flexibility -->
+                          <path class="left-shade" d="M0 0l5 3v5l-5 -3z" fill="rgb(181, 199, 227)"></path>
+                          <path class="right-shade" d="M10 0l-5 3v5l5 -3" fill="rgb(87, 128, 193)"></path>
+                        </g>
+                        <!-- Apply the cube shapes -->
+                        <use x="5" y="8" xlink:href="#cube"></use>
+                        <use x="-5" y="8" xlink:href="#cube"></use>
+                      
+                    </pattern>
+
+                    <rect class="card-back" width="45" height="80" x="0" y="0" rx="4" ry="4" fill="url(#pattern-cubes)" stroke="rgb(63, 103, 166)" stroke-width="3" visibility="visible"/>
                     <style> .card-symbol {font: bold 35px sans-serif; } </style>
-                    <rect class="card-front" width="45" height="80" x="0" y="0" rx="12" ry="12" stroke="white" stroke-width="4" visibility="hidden"/>
+                    <rect class="card-front" width="45" height="80" x="0" y="0" rx="4" ry="4" stroke="white" stroke-width="4" visibility="hidden"/>
                     <text class="card-symbol" x="{{ 45 / 2 }}" y="{{ 80 / 2 }}" text-anchor="middle" dominant-baseline="central" visibility="hidden"></text>
                     {% set id.value = id.value + 1 %}
                 </svg>
@@ -21,6 +29,17 @@
         {% endfor %}
         </div>
     {% endfor %}
+</div>
+
+<div class="score-container">
+    <div>
+        <label>You:</label>
+        <p id="score-player-text">0</p>
+    </div>
+    <div>
+        <label>Opponent:</label>
+        <p id="score-opponent-text">0</p>
+    </div>
 </div>
 
 <div class="state-container">

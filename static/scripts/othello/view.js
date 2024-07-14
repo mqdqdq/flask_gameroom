@@ -129,6 +129,8 @@ function setScoreBoard() {
 }
 
 function setState() {
+	console.log(scoreLight);
+	console.log(scoreDark);
     if (!opponentConnected) {
         stateText.innerHTML = STATUS_WAIT;
     }
@@ -140,7 +142,7 @@ function setState() {
 			if (scoreDark > scoreLight) {
 				stateText.innerHTML = (isDark()) ? STATUS_WIN : STATUS_LOSE;
 			}
-			else if (scoreLight < scoreDark) {
+			else if (scoreLight > scoreDark) {
 				stateText.innerHTML = (!isDark()) ? STATUS_WIN : STATUS_LOSE;
 			}
 			else {

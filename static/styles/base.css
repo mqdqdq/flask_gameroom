@@ -1,7 +1,8 @@
 html * {
-	font-family:  'Trebuchet MS';
+	font-family:  'Arial, Trebuchet MS';
 }
 
 body {
-	background-color: black;
+	background-image: url('/static/images/endless-constellation.svg');
+	background-size: auto;
 }

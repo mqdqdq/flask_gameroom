@@ -1,41 +1,70 @@
 .room-container {
     border: solid white 3px;
-    border-radius: 8px;
+    background-color: white;
+    border-radius: 4px;
     padding: 12px;
-    margin: 16px;
-    color: white;
-    font-family: sans-serif;
     width: max-content;
+    position: absolute;
+    top: 12px;
+    left: 12px;
 }
 
-body {
-    background-color: black;
+.room-container label {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 8px;
 }
 
 #exit-button {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: black;
-    border: solid white 3px;
-    font-family: sans-serif;
+    border: solid black 4px;
+    border-radius: 3px;
     color: white;
     font-size: 1em;
     width: 4em;
     height: 2em;
 }
 
-.header-container {
+a {
+    text-decoration: none;
+}
+
+#exit-button:hover {
+    margin-top: 10px;
+    display: block;
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
+    border: solid black 4px;
+    border-radius: 3px;
+    color: black;
+    font-size: 1em;
+    width: 4em;
+    height: 2em;
+}
+  
+.info-container {
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    padding: 0.8em;
+    border-radius: 0.2em;
+    border: 0.5em stroke white;
+    margin-bottom: 1.0em;
+    margin-top: 1.0em;
+    visibility: hidden;
+}
+
+#game-container {
+    background-color: white;
+    width: fit-content;
+    margin: auto;
     text-align: center;
-    margin-top: 2em;
-  }
-  
-  
-  .info-container {
-    padding-left: 1em;
-    padding-right: 1em;
-    border: 2px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4em;
-    max-width: fit-content;
-  }
+    padding: 2em;
+    border-radius: 0.5em;
+    border: 0.5em stroke white;
+}

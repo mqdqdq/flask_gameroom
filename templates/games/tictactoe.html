@@ -2,7 +2,7 @@
 {% for col in range(3) %}
     <div class="row">
     {% for row in range(3) %}
-        <div class="cell" id="row-{{row + 1}}-col-{{col + 1}}"></div>
+        <div class="cell row-{{row}} col-{{col}}" id="row-{{row + 1}}-col-{{col + 1}}"></div>
     {% endfor %}
     </div>
 {% endfor %}
@@ -10,6 +10,7 @@
 
 <div class="state-container">
     <p id="state-text"></p>
+    <p id="state-symbol-text"></p>
 </div>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/tictactoe.css') }}">

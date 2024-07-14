@@ -9,8 +9,8 @@ const STATE_FINISHED = "FINISHED"
 
 const STATUS_WIN = "You won"
 const STATUS_LOSE = "You lost"
-const STATUS_PLAYER = "Turn: You"
-const STATUS_OPPONENT = "Turn: Opponent"
+const STATUS_PLAYER = "Turn: you"
+const STATUS_OPPONENT = "Turn: opponent"
 const STATUS_WAIT = "Waiting"
 const STATUS_DRAW = "Draw"
 
@@ -19,16 +19,16 @@ const CARD_COLORS = ['blue', 'white', 'orange', 'white', 'white', 'red', 'white'
 const SYMBOL_COLORS = ['white', 'red', 'black', 'yellow', 'black', 'black', 'black', 'black', 'black', 'pink', 'white', 'black']
 
 const CARDS = [
-    {symbol: 'ᴥ', frameColor: 'white', cardColor: 'white', symbolColor: 'blue'}, 
-    {symbol: '❤', frameColor: 'white', cardColor: 'black', symbolColor: 'red'},
-    {symbol: '♣', frameColor: 'orange', cardColor: 'orange', symbolColor: 'black'},
-    {symbol: '■', frameColor: 'red', cardColor: 'black', symbolColor: 'red'},
-    {symbol: '♯', frameColor: 'white', cardColor: 'white', symbolColor: 'white'},
-    {symbol: '☆', frameColor: 'yellow', cardColor: 'white', symbolColor: 'yellow'},
-    {symbol: '✧', frameColor: 'pink', cardColor: 'white', symbolColor: 'pink'},
-    {symbol: 'X', frameColor: 'red', cardColor: 'black', symbolColor: 'red'},
+    {symbol: 'ᴥ', frameColor: "rgb(63, 103, 166)", cardColor: 'white', symbolColor: 'blue'}, 
+    {symbol: '❤', frameColor: "red", cardColor: 'white', symbolColor: 'red'},
+    {symbol: '♣', frameColor: "black", cardColor: 'orange', symbolColor: 'black'},
+    {symbol: '■', frameColor: 'black', cardColor: 'white', symbolColor: 'black'},
+    {symbol: '♯', frameColor: 'black', cardColor: 'white', symbolColor: 'purple'},
+    {symbol: '☆', frameColor: 'black', cardColor: 'white', symbolColor: 'pink'},
+    {symbol: '✧', frameColor: 'blue', cardColor: 'white', symbolColor: 'blue'},
+    {symbol: '!', frameColor: 'black', cardColor: 'black', symbolColor: 'red'},
     {symbol: '●', frameColor: 'green', cardColor: 'white', symbolColor: 'green'},
     {symbol: '▒', frameColor: 'white', cardColor: 'black', symbolColor: 'green'},
-    {symbol: '◬', frameColor: 'blue', cardColor: 'blue', symbolColor: 'pink'},
-    {symbol: '◈', frameColor: 'cyan', cardColor: 'red', symbolColor: 'cyan'}
+    {symbol: '?', frameColor: 'blue', cardColor: 'blue', symbolColor: 'white'},
+    {symbol: '◈', frameColor: 'white', cardColor: 'red', symbolColor: 'white'}
 ]
