@@ -1,12 +1,12 @@
 .room-container {
-    border: solid white 3px;
+    border: solid white 0.2em;
     background-color: white;
-    border-radius: 4px;
-    padding: 12px;
+    border-radius: 0.2em;
+    padding: 0.2em;
     width: max-content;
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 0.5em;
+    left: 0.5em;
 }
 
 .room-container label {
@@ -51,7 +51,7 @@ a {
     background-color: white;
     width: fit-content;
     margin: auto;
-    padding: 0.8em;
+    padding: 0.5em;
     border-radius: 0.2em;
     border: 0.5em stroke white;
     margin-bottom: 1.0em;
@@ -64,7 +64,7 @@ a {
     width: fit-content;
     margin: auto;
     text-align: center;
-    padding: 2em;
+    padding: 1.25em;
     border-radius: 0.5em;
     border: 0.5em stroke white;
 }

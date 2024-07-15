@@ -1,7 +1,7 @@
 const PLAYER_1 = 1
 const PLAYER_2 = 2
 
-const CARD_N = 24
+const CARD_N = 20
 
 const STATE_PAUSE = "PAUSE"
 const STATE_CONTINUE = "CONTINUE"

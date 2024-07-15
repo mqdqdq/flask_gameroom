@@ -6,3 +6,13 @@ body {
 	background-image: url('/static/images/endless-constellation.svg');
 	background-size: auto;
 }
+
+.content-container {
+	margin-top: 10em;
+}
+
+@media screen and (min-width: 80rem) {
+	.content-container {
+		margin-top: 4em;
+	}
+}

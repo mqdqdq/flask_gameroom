@@ -1,18 +1,25 @@
 #game-board {
-    border: solid white 4px;
+    border: solid white 1px;
     background: black;
-	width: min-content;
-	height: min-content;
-	border-radius: 25px;
+	width: 22em;
+	height: 22em;
+	border-radius: 14px;
 	text-align: center;
 	margin: auto;
 }
 
+@media screen and (min-width: 80rem) {
+	#game-board {
+		width: 30em;
+		height: 30em;
+	}
+}
+  
 .state-container {
 	width: fit-content;
 	text-align: center;
 	margin: auto;
-	margin-top: 2.0em;
+	margin-top: 1.4em;
 }
 
 #state-text {

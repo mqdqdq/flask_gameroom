@@ -9,13 +9,21 @@
 }
 
 .cell {
-	width: 120px;
-	height: 120px;
+	width: 100px;
+	height: 100px;
+	font-size: 6em;
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
-	font-size: 6em;
 	font-family: 'Brush Script MT';
+}
+
+@media screen and (min-width: 80rem) {
+	.cell {
+		width: 150px;
+		height: 150px;
+		font-size: 8em;
+	}
 }
 
 .state-container {
